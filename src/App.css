@@ -1,38 +1,162 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+body,
+html,
+#root {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+html {
+  font-size: 18px;
+  background-image: url('../public/tim-barton-skybox-red1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  padding: .77rem 0;
   text-align: center;
+  font-family: 'Protest Riot', sans-serif;
+  font-size: 1.88rem;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  opacity: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  height: 100%;
+  padding: 0 17% 10% 17%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-items: center;
+}
+
+.app-playlist {
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+}
+
+.app-playlist>* {
+  flex: 1;
+}
+
+button {
+  background-color: inherit;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 1020px) {
+  .App-playlist {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*    SEARCHBAR   */
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.searchbar input {
+  font-size: x-large;
+  background-color: inherit;
+  border: 1px solid;
+  border-radius: 2rem;
+  color: white;
+  width: min-content;
+  padding: .5rem;
+}
+
+.search-button {
+  border: 0px;
+  margin-left: -2.5rem;
+  border-left: 1px solid;
+  padding-left: .5rem;
+  font-size: large;
+}
+
+
+/*    SEARCH RESULTS  &  PLAYLIST   */
+
+.search-result h2{
+  border-bottom: 1px solid white;
+  padding-bottom: .3rem;
+}
+
+.search-result,
+.playlist-content {
+  position: relative;
+  background-color: rgba(22, 5, 9, 70%);
+  padding: 0 1rem 2rem;
+  text-align: center;
+  width:30%;
+}
+
+.save-button {
+  border: 1px solid white;
+  padding: .4rem;
+  border-radius: 2rem;
+  flex: 1;
+  position: relative;
+}
+
+.playlist-content input {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1.55rem;
+  background-color: inherit;
+  border: 0px;
+  color: white;
+  width: 90%;
+}
+
+.input-container{
+  padding: .8rem 0 .3rem;
+  border-bottom: 1px solid white;
+  margin-bottom: .5rem;
+}
+
+/*    TRACKLIST     */
+
+.each-track{
+  position: relative;
+  margin-bottom: .4rem;
+}
+
+.track{
+  border-bottom: 1px solid white;
+  padding-bottom: .5rem;
+  width: 100%;;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+}
+
+.track-info{
+  flex:16;
+}
+
+.track-action{
+  flex:1;
+  border: 0px;
+  font-size: large;
 }
