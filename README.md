@@ -14,7 +14,7 @@ You'll need to obtain a Client Id from [Spotify for developers](https://develope
 ### Clone the repository:
 1. Installation 
     ```bash
-    git clone https://github.com/ozgevurmaz/filmfinder.git;
+    git clone https://github.com/ozgevurmaz/jammming.git;
 
 2. Paste Client Id into Spotify.js
     ```bash
